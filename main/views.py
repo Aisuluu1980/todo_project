@@ -13,3 +13,7 @@ def test(request):
 
 def go(request):
     return render(request, 'go.html')
+
+
+def third(request):
+    return render(request, 'test3.html')
