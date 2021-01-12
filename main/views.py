@@ -1,18 +1,14 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 
 
 def homepage(request):
-    return HttpResponse('Hello Aisl!!!')
+    return render(request, 'index.html')
 
 
 def test(request):
     return render(request, 'test.html')
-
-
-def go(request):
-    return render(request, 'go.html')
 
 
 def third(request):
