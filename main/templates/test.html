@@ -9,6 +9,11 @@
 
 <body>
     <h2>Это тестовая страница!!</h2>
+    {% for todo in todo_list %}
+    <h3>{{todo.text}}</h3>
+    {{todo.created_at}}
+
+    {% endfor %}
 
 </body>
 
