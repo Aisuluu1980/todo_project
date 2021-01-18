@@ -13,3 +13,15 @@ def test(request):
 
 def third(request):
     return render(request, 'test3.html')
+
+
+def add(request):
+    return render(request, 'add.html')
+
+
+def update(request):
+    return render(request, 'update.html')
+
+
+def delete(request):
+    return render(request, 'delete.html')

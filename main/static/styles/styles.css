@@ -1,0 +1,18 @@
+.delete {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.add {
+    color: green;
+    font-size: 16px;
+    font: outline;
+}
+
+.update {
+    color: blue;
+    font-size: 20px;
+    text-transform: uppercase;
+}
