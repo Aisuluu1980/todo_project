@@ -21,125 +21,24 @@
         </div>
 
         <div class="todo_container">
-
-            <div class="todo_item done">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Просмотреть урок№28</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 06.01 2021 <span>17:22</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="todo_item done">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Сделать домашнее задание №18</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 07.01 2021 <span>20:00</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
-
+            {% for todo in todo_list%}
             <div class="todo_item">
                 <div class="todo_item_header">
                     <label class="checkbox_container">
                         <input type="checkbox" />
                         <span class="checkmark"></span>
                     </label>
-                    <h4>Тренировка</h4>
+                    <h4>{{todo.text}}</h4>
                 </div>
                 <div class="todo_item_footer">
-                    <p> 09.01 2021 <span>10:00</span></p>
+                    <p> {{ todo.created_at}}</p>
                     <div class="action_buttons">
                         <img src="./icons/star.png" />
                         <img src="./icons/trash_120980.png" />
                     </div>
                 </div>
             </div>
-
-            <div class="todo_item marked">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Начать разработку портфолио.</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 09.01.2021 <span>16:00</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="todo_item marked">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Сходить с детьми в кино.</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 10.01.2021 <span>11:00</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="todo_item">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Проведать родителей.</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 10.01 2021 <span>15:00</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="todo_item">
-                <div class="todo_item_header">
-                    <label class="checkbox_container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                    <h4>Приготовить школьную форму детей.</h4>
-                </div>
-                <div class="todo_item_footer">
-                    <p> 10.01 2021 <span>19:00</span></p>
-                    <div class="action_buttons">
-                        <img src="./icons/star.png" />
-                        <img src="./icons/trash_120980.png" />
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
 
