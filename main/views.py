@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import ToDo
 
 # Create your views here.
@@ -19,7 +19,11 @@ def third(request):
 
 
 def add(request):
-    return render(request, 'add.html')
+    form = request.POST
+    text = form['todo_text']
+    todo = ToDo(text=text)
+    todo.save()
+    return redirect(homepage)
 
 
 def update(request):
