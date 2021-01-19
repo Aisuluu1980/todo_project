@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from main.views import homepage, third, add, update, delete
+from main.views import homepage, third, add, update, delete, mark_todo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,8 @@ urlpatterns = [
     path('third', third, name='third'),
     path('add', add, name='add'),
     path('update', update, name='update'),
-    path('delete/<id>', delete, name='delete')
+    path('delete/<id>', delete, name='delete'),
+    path('mark/<id>', mark_todo, name='mark_todo'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
